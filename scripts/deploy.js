@@ -12,10 +12,6 @@ async function main() {
   await LocusGoupNFT.deployed();
 
   console.log("Contract address:", LocusGoupNFT.address);
-
-  for (i = 0; i < 29; i++) {
-    await LocusGoupNFT.startMint();
-  }
 }
 
 main().catch((error) => {

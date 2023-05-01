@@ -25,16 +25,15 @@ contract LocusGoupNFT is ERC721 {
 
     receive() external payable {}
 
-    function startMint() public payable {
-        uint256 currentTokenId = _nextTokenId.current();
+    function startMint(address _to) public payable onlyOwner {
+        uint256 currentTokenId = _nextTokenId.current() + 1;
         _nextTokenId.increment();
-        address to = msg.sender;
+        address to = _to;
         super._safeMint(to, currentTokenId, "");
     }
 
     function _mint(address to, uint256 tokenId) internal override {
         require(saleIsActive, "Sale must be active to mint");
-        require(to == _msgSender(), "You can only buy with your wallet");
         require(to != address(0), "ERC721: mint to the zero address");
         require(!_exists(tokenId), "ERC721: token already minted");
         require(MAXSUPLAY >= tokenId, "Too mach tokkens");
