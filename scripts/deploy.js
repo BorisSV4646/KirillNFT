@@ -6,12 +6,12 @@ async function main() {
   console.log("Deploying contracts with the account:", deployer.address);
   console.log("Account balance:", (await deployer.getBalance()).toString());
 
-  const LocusGoup = await ethers.getContractFactory("LocusGoupNFT", deployer);
-  const LocusGoupNFT = await LocusGoup.deploy();
+  const LocusGroup = await ethers.getContractFactory("LocusGroupNFT", deployer);
+  const LocusGroupNFT = await LocusGroup.deploy();
 
-  await LocusGoupNFT.deployed();
+  await LocusGroupNFT.deployed();
 
-  console.log("Contract address:", LocusGoupNFT.address);
+  console.log("Contract address:", LocusGroupNFT.address);
 }
 
 main().catch((error) => {

@@ -4,7 +4,7 @@ pragma solidity ^0.8.0;
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 
-contract LocusGoupNFT is ERC721 {
+contract LocusGroupNFT is ERC721 {
     Counters.Counter private _nextTokenId;
     using Counters for Counters.Counter;
 

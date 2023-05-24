@@ -4,8 +4,8 @@ const path = require("path");
 for (let i = 1; i <= 80; i++) {
   const filePath = path.join(__dirname, "JSON", "" + i);
   let json = {};
-  json.name = "LocusGoupNFT #" + i;
-  json.description = "NFT collections from LocusGoupNFT";
+  json.name = "LocusGroupNFT #" + i;
+  json.description = "NFT collections from LocusGroupNFT";
   json.image =
     "ipfs://bafybeiebmxpsnhqavtvrawfjanc7phul2htznd76nnc7tu6owvc6dgvvae/" +
     i +
